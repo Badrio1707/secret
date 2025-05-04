@@ -7,7 +7,10 @@ btn.addEventListener("click", () => {
   const isMay5 = today.getMonth() === 4 && today.getDate() === 5;
   console.log(isMay5);
 
-
+  if (!isMay5) {
+    alert("Masih rahasia 🎁, Buka Tanggal 5 Mei❤️");
+    return;
+  }
 
   // Jika tanggal 5 Mei, jalankan animasi
   wrapper.classList.add("open");
