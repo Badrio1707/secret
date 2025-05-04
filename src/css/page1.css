@@ -1,0 +1,105 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle, #fde2ff, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.balloon-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.balloon {
+  height: 130px;
+  width: 100px;
+  opacity: 0;
+  transform: translateY(150px);
+  transition: transform 1.5s ease-in, opacity 1.5s ease;
+}
+
+.absolute-wrapper {
+  position: relative;
+}
+
+.floating {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%) translateY(200px);
+  opacity: 0;
+  transition: transform 1.5s ease-out, opacity 1.5s ease;
+}
+
+#text1 {
+  top: -100px;
+}
+#text2 {
+  top: -50px;
+}
+#cake {
+  top: 100px;
+}
+
+.top-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 120px;
+  opacity: 0;
+  transform: translateY(-100vh);
+  transition: transform 1.5s ease-out, opacity 1.5s ease;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+}
+
+.next-button {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
